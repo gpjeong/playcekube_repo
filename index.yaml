@@ -9,7 +9,7 @@ entries:
       catalog.cattle.io/release-name: argo-cd
     apiVersion: v2
     appVersion: v2.5.4
-    created: "2024-11-13T12:44:12.351470457+09:00"
+    created: "2024-11-13T12:47:37.438442916+09:00"
     dependencies:
     - condition: redis-ha.enabled
       name: redis-ha
@@ -45,7 +45,7 @@ entries:
       catalog.cattle.io/release-name: argo-events
     apiVersion: v2
     appVersion: v1.7.1
-    created: "2024-11-13T12:44:12.353442146+09:00"
+    created: "2024-11-13T12:47:37.44047347+09:00"
     description: A Helm chart for Argo Events, the event-driven workflow automation
       framework
     digest: c383875adc409f08ee1e3766c1f96841f45fdf8b218737007ccb01902c9455c3
@@ -74,7 +74,7 @@ entries:
       catalog.cattle.io/release-name: argo-rollouts
     apiVersion: v2
     appVersion: v1.2.0
-    created: "2024-11-13T12:44:12.363238398+09:00"
+    created: "2024-11-13T12:47:37.447981442+09:00"
     description: A Helm chart for Argo Rollouts
     digest: 753e084428c3ef9c52cd091b3e72c31a35ca14a072811c13e6d66093c07f93e0
     home: https://github.com/argoproj/argo-helm
@@ -96,7 +96,7 @@ entries:
       catalog.cattle.io/release-name: gitea
     apiVersion: v2
     appVersion: 1.16.8
-    created: "2024-11-13T12:44:12.381826986+09:00"
+    created: "2024-11-13T12:47:37.469061351+09:00"
     dependencies:
     - condition: memcached.enabled
       name: memcached
@@ -153,7 +153,7 @@ entries:
       category: Infrastructure
     apiVersion: v2
     appVersion: 2.5.2
-    created: "2024-11-13T12:44:12.416632484+09:00"
+    created: "2024-11-13T12:47:37.505478858+09:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -213,7 +213,7 @@ entries:
       catalog.cattle.io/release-name: jenkins
     apiVersion: v2
     appVersion: 2.346.1
-    created: "2024-11-13T12:44:12.424909446+09:00"
+    created: "2024-11-13T12:47:37.512848741+09:00"
     description: Jenkins - Build great things at any scale! The leading open source
       automation server, Jenkins provides hundreds of plugins to support building,
       deploying and automating any project.
@@ -250,7 +250,7 @@ entries:
       category: DeveloperTools
     apiVersion: v2
     appVersion: 16.1.1
-    created: "2024-11-13T12:44:12.445835489+09:00"
+    created: "2024-11-13T12:47:37.52822746+09:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -282,4 +282,50 @@ entries:
     urls:
     - keycloak-7.1.17.tgz
     version: 7.1.17
-generated: "2024-11-13T12:44:12.331467133+09:00"
+  oauth2-proxy:
+  - annotations:
+      catalog.cattle.io/certified: playcekube
+      catalog.cattle.io/namespace: playcekube
+      catalog.cattle.io/release-name: oauth2-proxy
+    apiVersion: v2
+    appVersion: 7.2.0
+    created: "2024-11-13T12:47:37.542042317+09:00"
+    dependencies:
+    - alias: redis
+      condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: ~16.4.0
+    description: A reverse proxy that provides authentication with Google, Github
+      or other providers
+    digest: 1f38caded908a03676ae8027cd1e971b31af63aba4f37f0a7d0a2411926b1c0e
+    home: https://oauth2-proxy.github.io/oauth2-proxy/
+    keywords:
+    - security
+    - infrastructure
+    - kubernetes
+    - oauth
+    - oauth2
+    - authentication
+    - google
+    - github
+    - redis
+    kubeVersion: '>=1.9.0-0'
+    maintainers:
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    - name: tlawrie
+    - email: nicholas.meves@gmail.com
+      name: NickMeves
+    - email: joel.speed@hotmail.co.uk
+      name: JoelSpeed
+    - email: pierluigi.lenoci@gmail.com
+      name: pierluigilenoci
+    name: oauth2-proxy
+    sources:
+    - https://github.com/oauth2-proxy/oauth2-proxy
+    - https://github.com/oauth2-proxy/manifests
+    urls:
+    - oauth2-proxy-6.2.0.tgz
+    version: 6.2.0
+generated: "2024-11-13T12:47:37.417350214+09:00"
